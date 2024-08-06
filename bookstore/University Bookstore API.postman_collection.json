@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "10147f07-53e1-40f3-a11a-e5417133def3",
+		"name": "University Bookstore API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Base API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						""
+					]
+				},
+				"description": "Base API to access all other parts of the API"
+			},
+			"response": [
+				{
+					"name": "Base API",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"categories\": \"http://127.0.0.1:9000/categories/\",\n    \"writers\": \"http://127.0.0.1:9000/writers/\",\n    \"books\": \"http://127.0.0.1:9000/books/\",\n    \"reviews\": \"http://127.0.0.1:9000/reviews/\",\n    \"orders\": \"http://127.0.0.1:9000/orders/\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Orders List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9000/orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"orders",
+						""
+					]
+				},
+				"description": "> Order List API Documentation:  \n>   \n> This API is used to get the list of orders.  \n> Orders are sorted by date of creation.  \n> The list of orders can be filtered by status.  \n> The list of orders can be filtered by date range.  \n> The list of orders can be filtered by customer.  \n> The list of orders can be filtered by product.  \n> The list of orders can be filtered by order number."
+			},
+			"response": [
+				{
+					"name": "Orders List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"customer\": 11,\n        \"name\": \"Obiora Ugwoke\",\n        \"email\": \"1leonnoel1@gmail.com\",\n        \"phone\": \"3064902929\",\n        \"address\": \"423 10 Avenue Northeast\",\n        \"city\": \"Calgary\",\n        \"province\": \"Newfoundland and Labrador\",\n        \"postal_code\": \"T2E 0X5\",\n        \"payment_method\": \"Credit Card\",\n        \"account_no\": \"11223\",\n        \"transaction_id\": 4,\n        \"payable\": 100,\n        \"totalbook\": 1,\n        \"created\": \"2022-04-15T02:57:51.963329Z\",\n        \"updated\": \"2022-04-15T02:57:51.963353Z\",\n        \"paid\": false\n    },\n    {\n        \"id\": 3,\n        \"customer\": 11,\n        \"name\": \"testa\",\n        \"email\": \"1leonnoel1@gmail.com\",\n        \"phone\": \"230\",\n        \"address\": \"123\",\n        \"city\": \"Calgary\",\n        \"province\": \"Alberta\",\n        \"postal_code\": \"T2E 0X5\",\n        \"payment_method\": \"Credit Card\",\n        \"account_no\": \"123745\",\n        \"transaction_id\": 45,\n        \"payable\": 108,\n        \"totalbook\": 2,\n        \"created\": \"2022-04-15T00:05:55.371976Z\",\n        \"updated\": \"2022-04-15T00:05:55.372025Z\",\n        \"paid\": false\n    },\n    {\n        \"id\": 2,\n        \"customer\": 11,\n        \"name\": \"testbuyer\",\n        \"email\": \"1leonnoel1@gmail.com\",\n        \"phone\": \"23490\",\n        \"address\": \"123\",\n        \"city\": \"Calgary\",\n        \"province\": \"Alberta\",\n        \"postal_code\": \"te2\",\n        \"payment_method\": \"Credit Card\",\n        \"account_no\": \"11223\",\n        \"transaction_id\": 1,\n        \"payable\": 400,\n        \"totalbook\": 1,\n        \"created\": \"2022-04-14T23:53:33.693509Z\",\n        \"updated\": \"2022-04-14T23:53:33.693531Z\",\n        \"paid\": false\n    },\n    {\n        \"id\": 1,\n        \"customer\": 11,\n        \"name\": \"testbuyer\",\n        \"email\": \"1leonnoel1@gmail.com\",\n        \"phone\": \"23490\",\n        \"address\": \"123\",\n        \"city\": \"Calgary\",\n        \"province\": \"Alberta\",\n        \"postal_code\": \"te2\",\n        \"payment_method\": \"Credit Card\",\n        \"account_no\": \"11223\",\n        \"transaction_id\": 1,\n        \"payable\": 400,\n        \"totalbook\": 1,\n        \"created\": \"2022-04-14T23:46:35.081752Z\",\n        \"updated\": \"2022-04-14T23:46:35.081765Z\",\n        \"paid\": false\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Review List",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "noeladmin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "4Django.",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9000/reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"reviews",
+						""
+					]
+				},
+				"description": "> Review List API Documentation:  \n>   \n> This API is used to get the list of reviews.  \n> Reviews are sorted by date of creation.  \n> The list of reviews can be filtered by status.  \n> The list of reviews can be filtered by date range.  \n> The list of reviews can be filtered by customer.  \n> The list of reviews can be filtered by product."
+			},
+			"response": [
+				{
+					"name": "Review List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/reviews/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"reviews",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"book\": 13,\n        \"customer\": 4,\n        \"review_star\": 3,\n        \"review_text\": \"There we go\",\n        \"created\": \"2022-04-15T04:12:48.693918Z\"\n    },\n    {\n        \"id\": 4,\n        \"book\": 57,\n        \"customer\": 11,\n        \"review_star\": 1,\n        \"review_text\": \"Nice Book\",\n        \"created\": \"2022-04-15T20:12:00.271228Z\"\n    },\n    {\n        \"id\": 5,\n        \"book\": 57,\n        \"customer\": 11,\n        \"review_star\": 5,\n        \"review_text\": \"Not Bad\",\n        \"created\": \"2022-04-15T20:13:01.420138Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Books List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9000/books/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"books",
+						""
+					]
+				},
+				"description": "> Books List API Documentation:  \n>   \n> This API is used to get the list of books.  \n> Books are sorted by date of book_id  \n> The list of books can be filtered by id.  \n> writer of the book,  \n> category of the book,  \n> name of the book,  \n> price of the book,  \n> the stock of the book,  \n> cover page image of the book  \n> book page image of the book  \n> The list of books can be filtered by date range."
+			},
+			"response": [
+				{
+					"name": "Books List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9000/books/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 13,\n        \"writer\": 6,\n        \"category\": 1,\n        \"name\": \"Introduction to computer science\",\n        \"slug\": \"introduction-computer-science\",\n        \"price\": 100,\n        \"stock\": 20,\n        \"coverpage\": \"http://127.0.0.1:9000/media/coverpage/computer1.jpg\",\n        \"bookpage\": \"http://127.0.0.1:9000/media/bookpage/computer1.jpg\",\n        \"created\": \"2021-05-20T03:25:12.875338Z\",\n        \"updated\": \"2022-04-14T21:45:51.651692Z\",\n        \"totalreview\": 1,\n        \"totalrating\": 5,\n        \"status\": 0,\n        \"description\": \"Best Introduction about Computer Science\"\n    },\n    {\n        \"id\": 14,\n        \"writer\": 1,\n        \"category\": 1,\n        \"name\": \"Computer Science Illuminated\",\n        \"slug\": \"computer-science-illuminated\",\n        \"price\": 100,\n        \"stock\": 20,\n        \"coverpage\": \"http://127.0.0.1:9000/media/coverpage/computer2.jpg\",\n        \"bookpage\": \"http://127.0.0.1:9000/media/bookpage/computer2.jpg\",\n        \"created\": \"2021-05-20T03:26:48.975736Z\",\n        \"updated\": \"2022-04-14T21:45:51.650497Z\",\n        \"totalreview\": 1,\n        \"totalrating\": 5,\n        \"status\": 0,\n        \"description\": \"Best Computer Science Illuminated Books\"\n    },\n    {\n        \"id\": 18,\n        \"writer\": 2,\n        \"category\": 2,\n        \"name\": \"The Fifth Sea Stone\",\n        \"slug\": \"fifth-sea-stone\",\n        \"price\": 100,\n        \"stock\": 20,\n        \"coverpage\": \"http://127.0.0.1:9000/media/coverpage/sci3.jpg\",\n        \"bookpage\": \"http://127.0.0.1:9000/media/bookpage/sci3.jpg\",\n        \"created\": \"2021-05-20T03:39:51.141238Z\",\n        \"updated\": \"2022-04-14T21:45:51.646090Z\",\n        \"totalreview\": 1,\n        \"totalrating\": 5,\n        \"status\": 0,\n        \"description\": \"Best The Fifth Sea Stone Books\"\n    },\n    {\n        \"id\": 19,\n        \"writer\": 2,\n        \"category\": 2,\n        \"name\": \"The Pratchett\",\n        \"slug\": \"pratchett\",\n        \"price\": 100,\n        \"stock\": 20,\n        \"coverpage\": \"http://127.0.0.1:9000/media/coverpage/sci1.jpg\",\n        \"bookpage\": \"http://127.0.0.1:9000/media/bookpage/sci2.jpg\",\n        \"created\": \"2021-05-20T03:40:51.689110Z\",\n        \"updated\": \"2022-04-14T21:45:51.644843Z\",\n        \"totalreview\": 1,\n        \"totalrating\": 5,\n        \"status\": 0,\n        \"description\": \"Best The Pratchett Book\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Single Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "13"
+						}
+					]
+				},
+				"description": "> This API is used to get the details of a book.  \n> The details of a book contains the following information:  \n> id of the book,  \n> writer of the book,  \n> category of the book,  \n> name of the book,  \n> price of the book,  \n> stock of the book,  \n> coverpage image of the book,  \n> bookpage image of the book  \n> rating and review of the book,  \n> description of the book."
+			},
+			"response": [
+				{
+					"name": "Single Book",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 13,\n    \"writer\": 6,\n    \"category\": 1,\n    \"name\": \"Introduction to computer science\",\n    \"slug\": \"introduction-computer-science\",\n    \"price\": 100,\n    \"stock\": 20,\n    \"coverpage\": \"http://127.0.0.1:8000/media/coverpage/computer1.jpg\",\n    \"bookpage\": \"http://127.0.0.1:8000/media/bookpage/computer1.jpg\",\n    \"created\": \"2021-05-20T03:25:12.875338Z\",\n    \"updated\": \"2022-04-13T00:58:57.176649Z\",\n    \"totalreview\": 1,\n    \"totalrating\": 5,\n    \"status\": 0,\n    \"description\": \"Best Introduction about Computer Science\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Writers List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9000/writers/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"writers",
+						""
+					]
+				},
+				"description": "> Writers List API Documentation:  \n>   \n> This API is used to get the list of writers.  \n> Writers are sorted by id.  \n> The list of writers can be filtered by name.  \n> The writers have a short bio attached to them and an image"
+			},
+			"response": []
+		}
+	]
+}

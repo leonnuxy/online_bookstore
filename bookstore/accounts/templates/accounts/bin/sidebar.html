@@ -1,0 +1,8 @@
+<div class="cat-content">
+    <div class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+        <!-- Computer Science, Sci-Fi & Fantasy, Arts & Photography, Business & Money, Mystery & Suspense, CookBooks & Food, Literature & Fiction, History, Kids Comics, Romance, Biographies & Memories -->
+        {% for p in cat %}
+        <a class="nav-link" href="{% url 'store:category' id=p.id %}" aria-controls="{{ p.name }}" aria-selected="true">{{ p.name }}</a>
+        {% endfor %}
+    </div>
+</div>

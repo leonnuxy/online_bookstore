@@ -1,0 +1,72 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block headermenu %}
+
+
+{% endblock %}
+
+    {% block container %}
+
+    <div class="container" >
+        <br> <br> 
+        <div class="columns is-multiline">
+            <div class="column is-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="content">
+                            <h1 class="title is-3">Edit Profile</h1>
+                            <h2 class="subtitle is-5">
+                                <!-- Links to Change Password, Change Email, and Account Name -->
+                                <p>
+                                    <a href="{% url 'accounts:editpage' %}">Change password</a>
+                                </p>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           
+            
+            <br> <br> <br> <br> <br> <br>
+            <!-- Main Content -->
+            <!-- Welcome User -->
+            <div class="header">
+                <br> <br> <br>
+                <h1>Welcome {{ request.user.username }}</h1>
+            </div>
+            <br> <br> <br> <br> <br> <br>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Add Books</h3></div>
+                    </div>
+                    <!-- Add Book Button -->
+                    <!-- Should be a link to the add book page -->
+                    <div class="card-footer">
+                        <a href="{% url 'accounts:addbook' %}" class="btn btn-primary">Add Book</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3 class="card-title">Returns...Coming Soon</h3></div>
+                    <div class="card-body table-responsive p-0">
+                        
+                    </div>
+                </div>
+            </div>
+            <br> <br> <br> <br> <br> <br>
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br> <br>
+    
+        
+    </div>
+    <div class="col-sm-12">
+        
+    </div>
+    <div class="container">
+            
+    </div>
+
+    {% endblock %}

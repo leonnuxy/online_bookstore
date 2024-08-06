@@ -1,0 +1,49 @@
+<div class="navbar" style="background-color: #968556;">
+        <div class="navbar-start">
+            <a href="{% url 'store:home' %}"><h3 style="font-family:Lucida Handwriting; color: rgb(40, 40, 32); font-size: 32px;"> University Bookstore</h3></a>
+        </div>
+        <form action="{% url 'search:search' %}" method="GET">
+                <div class="field is-grouped">
+                        <input class="input" type="text" name="search" placeholder="Search by Title, Author, or ISBN" size="60">
+                        <button class="button is-primary"><span> Search </span></button>
+                </div>
+        </form>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <!-- User Display -->
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown"> 
+                        <p class="control">
+                            <!-- <a class="button is-primary" href="{% url 'accounts:home' %}"><span>Account</span></a> -->
+                            <a class="button is-primary" href="{% url 'accounts:home' %}">{{ request.user.username }}</a>
+                            <p class="cart">
+                                <a class="button is-primary" href="{% url 'cart:cart_details' %}"> Cart--  <i class="fa fa-angle-left"></i>
+                                    <span class="totalcart" id="gettotalcart"> {{ cart|length }} </span> 
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </p>
+                            <a class="button is-primary" href="{% url 'store:signout' %}"><span>Logout</span></a>
+                        </p>
+                    </li>
+                    <!-- Member Login Element -->
+                    
+                    {% else %}
+                        <p class="control">
+                            <a class="button is-primary" href="{% url 'store:signin' %}"><span>Login</span></a>
+                        </p>
+                        <p class="cart">
+					    	<a class="button is-primary" href="{% url 'cart:cart_details' %}"> Cart--  <i class="fa fa-angle-left"></i>
+					    		<span class="totalcart" id="gettotalcart"> {{ cart|length }} </span> 
+                                <i class="fa fa-angle-right"></i>
+					    	</a>
+					    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        
+
+</div>
+

@@ -1,0 +1,51 @@
+<!-- Page to Edit User Information --> 
+<!-- Compare this snippet from accounts/templates/accounts/home.html: -->
+{% extends 'store/base.html' %}
+{% load static %}
+{% block headermenu %}
+
+{% endblock %}
+
+{% block container %}
+
+    {% block content %}
+    <!-- Page will contain a form for users to update name, email, and password -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h1>Change Password</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form action="#" method="POST" role="form" style="display: block;">
+                                {% csrf_token %}
+                                {% for field in form %}
+                                    <div class="form-group">
+                                        {{ field.label_tag }}
+                                        {{ field }}
+
+                                        {% if field.help_text %}{% endif %}
+
+                                        {% for error in field.errors %}
+                                        <p style="color: red;font-size: 13px">{{ error }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endfor %}
+                                <button class="btn submit-button" style="background-color: #26ab62;color: white;">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+{% endblock %}
